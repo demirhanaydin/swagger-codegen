@@ -26,8 +26,8 @@ fi
 
 # if you've executed sbt assembly previously it will use that instead.
 export JAVA_OPTS="${JAVA_OPTS} -XX:MaxPermSize=256M -Xmx1024M -DloggerPath=conf/log4j.properties"
-ags="$@ generate -i http://lvh.me:3000/api/v1/docs.json -l typescript-angular2 -o samples/client/portakal/typescript-angular2/default"
+ags="$@ generate -i http://lvh.me:3000/v1/docs.json -l typescript-angular2 -o samples/client/portakal/typescript-angular2/default"
 
 java $JAVA_OPTS -jar $executable $ags
 
-cp -r samples/client/portakal/typescript-angular2/default/ /Users/demirhanaydin/projects/portakalmis/mobile/devdactic-simpleLogin/src/app/api
+cp -r samples/client/portakal/typescript-angular2/default/ /Users/demirhanaydin/projects/portakalmis/mobile/portakal/src/api
